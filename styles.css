@@ -499,16 +499,20 @@ nav {
   }
 
   nav {
-    position: static;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick the navbar at the top of the page */
     padding-block: 2rem;
     padding-inline: 1rem;
-    max-width: var(--max-width);
+    max-width: 100%;
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-  }
+    background-color: white; /* Ensure a background color to prevent content from showing through */
+    z-index: 1000; /* Ensure the navbar stays on top of other content */
+}
+
 
   .nav__header {
     flex: 1;
